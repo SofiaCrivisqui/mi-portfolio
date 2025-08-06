@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ProjectCard({ name, description, image, link, tags }) {
+export default function ProjectCard({
+  name,
+  description,
+  image,
+  link,
+  tags,
+  herramientas,   // <-- añadida aquí
+}) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
@@ -11,6 +18,8 @@ export default function ProjectCard({ name, description, image, link, tags }) {
       <div className="p-6">
         <h4 className="text-xl font-semibold mb-2">{name}</h4>
         <p className="mb-4 text-sm">{description}</p>
+
+        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, i) => (
             <span
@@ -21,6 +30,22 @@ export default function ProjectCard({ name, description, image, link, tags }) {
             </span>
           ))}
         </div>
+
+        {/* Herramientas */}
+        <div className="mb-4">
+          <h5 className="text-sm font-semibold mb-1">Herramientas:</h5>
+          <div className="flex flex-wrap gap-2">
+            {herramientas.map((tool, i) => (
+              <span
+                key={i}
+                className="text-xs bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 px-2 py-1 rounded-full"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <a
           href={link}
           target="_blank"
