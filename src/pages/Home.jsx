@@ -7,33 +7,93 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
-    name: "Base Cero",
-    description: "Servicios digitales para emprendedores: landing pages, asesoramiento, análisis NPS.",
-    image: "/img/basecero.jpg",
-    link: "https://baseceroup.com",
-    tags: ["UX/UI", "Responsive", "Tailwind"]
-  },
+  name: "Base Cero",
+  description: "Servicios digitales para emprendedores: landing pages, asesoramiento, análisis NPS.",
+  image: "/img/basecero.jpg",
+  link: "https://baseceroup.com",
+  tags: [
+    "Landing Page",
+    "UX/UI",
+    "Responsive Design",
+    "Tailwind CSS",
+    "AOS Animations",
+    "NPS Integration",       // Net Promoter Score integrado :contentReference[oaicite:2]{index=2}
+    "Interactive Forms",
+    "Data Visualization"
+  ],
+  herramientas: [
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "JavaScript (ES6+)",
+    "Animate on Scroll (AOS)",   // animaciones al hacer scroll
+    "Chart.js",                  // gráficos para dashboard NPS
+    "Figma",                     // prototipado y diseño UI
+    "Git & GitHub",              // control de versiones
+    
+  
+  ]
+},
+
+  
+ {
+  name: "Palabra y Abismo",
+  description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
+  image: "/img/palabrayabismo.jpg",
+  link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
+  tags: [
+    "Psicoanálisis",
+    "Filosofía",
+    "UI personalizada",
+    "Diseño responsivo",
+    "Accesibilidad",
+    "Storytelling",
+    "Animaciones CSS"
+  ],
+  herramientas: [
+    "HTML5",
+    "CSS3",
+    "Bootstrap 5",
+    "JavaScript (ES6)",
+    "Font Awesome",
+    "GitHub Pages",
+    "Figma",
+    "Adobe Photoshop"
+  ]
+},
   {
-    name: "Palabra y Abismo",
-    description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
-    image: "/img/palabrayabismo.jpg",
-    link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
-    tags: ["Psicoanálisis", "UI personalizada", "Filosofía"]
-  },
-  {
-    name: "Mhum",
-    description: "E-commerce de lencería moderna. Desarrollo con filtros, zoom y pasarela de pago.",
-    image: "/img/mhum.jpg",
-    link: "https://mhum.com",
-    tags: ["E-commerce", "React", "UX"]
-  },
-  {
-    name: "Atria-Estudio",
-    description: "Landing visual para estudio de arquitectura. Mockups realistas y enfoque premium.",
-    image: "/img/atriaestudio.jpg",
-    link: "https://sofiacrivisqui.github.io/atriaestudio/",
-    tags: ["Minimalismo", "Portafolio visual", "Diseño arquitectónico"]
-  }
+ 
+  name: "Mhum",
+  description: "E-commerce de lencería moderna. Desarrollo con filtros dinámicos, zoom de producto y diseño 100% responsivo.",
+  image: "/img/mhum.jpg",
+  link: "https://mhum.com",
+  tags: [
+    "E-commerce",
+    "Responsive Design",
+    "Product Filtering",
+    "Image Zoom",
+    "UX/UI"
+  ],
+  herramientas: [
+    "HTML5",
+    "CSS3 (Bootstrap 5)",
+    "JavaScript (ES6)",
+    "Git & GitHub",
+    "Visual Studio Code",
+    "Figma",
+    "Adobe Photoshop"
+  ]
+},
+  
+   {
+  name: "Atria-Estudio",
+  description: "Landing visual para estudio de arquitectura. Mockups realistas y enfoque premium.",
+  image: "/img/atriaestudio.jpg",
+  link: "https://sofiacrivisqui.github.io/atriaestudio/",
+  tags: ["Minimalismo", "Portafolio visual", "Diseño arquitectónico"], 
+  herramientas: ["React", "Tailwind CSS", "Figma", "Framer Motion", "GitHub", "Netlify"]
+}
+
 ];
 
 export default function Home() {
