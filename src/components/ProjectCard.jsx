@@ -7,7 +7,7 @@ export default function ProjectCard({
   image,
   link,
   tags,
-  herramientas,   // <-- añadida aquí
+  herramientas,
 }) {
   return (
     <motion.div
