@@ -63,7 +63,7 @@ const projects = [
     name: "Mhum",
     description: "E-commerce de lencería moderna. Desarrollo con filtros dinámicos, zoom de producto y diseño 100% responsivo.",
     image: "/img/mhum.jpg",
-    link: "https://mhum.com",
+    link: "https://mhum.com.ar",
     tags: [
       "E-commerce",
       "Responsive Design",
