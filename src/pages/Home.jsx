@@ -4,108 +4,103 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
+import WhatsAppButton from "../components/WhatsAppButton"; // <- import correcto (Home está en /src/pages)
 
+/* Proyectos desarrollo web */
 const projects = [
   {
-  name: "Base Cero",
-  description: "Servicios digitales para emprendedores: landing pages, asesoramiento, análisis NPS.",
-  image: "/img/basecero.jpg",
-  link: "https://baseceroup.com",
-  tags: [
-    "Landing Page",
-    "UX/UI",
-    "Responsive Design",
-    "Tailwind CSS",
-    "AOS Animations",
-    "NPS Integration",       // Net Promoter Score integrado :contentReference[oaicite:2]{index=2}
-    "Interactive Forms",
-    "Data Visualization"
-  ],
-  herramientas: [
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "JavaScript (ES6+)",
-    "Animate on Scroll (AOS)",   // animaciones al hacer scroll
-    "Chart.js",                  // gráficos para dashboard NPS
-    "Figma",                     // prototipado y diseño UI
-    "Git & GitHub",              // control de versiones
-    
-  
-  ]
-},
-
-  
- {
-  name: "Palabra y Abismo",
-  description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
-  image: "/img/palabrayabismo.jpg",
-  link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
-  tags: [
-    "Psicoanálisis",
-    "Filosofía",
-    "UI personalizada",
-    "Diseño responsivo",
-    "Accesibilidad",
-    "Storytelling",
-    "Animaciones CSS"
-  ],
-  herramientas: [
-    "HTML5",
-    "CSS3",
-    "Bootstrap 5",
-    "JavaScript (ES6)",
-    "Font Awesome",
-    "GitHub Pages",
-    "Figma",
-    "Adobe Photoshop"
-  ]
-},
+    name: "Base Cero",
+    description: "Servicios digitales para emprendedores: landing pages, asesoramiento, análisis NPS.",
+    image: "/img/basecero.jpg",
+    link: "https://baseceroup.com",
+    tags: [
+      "Landing Page",
+      "UX/UI",
+      "Responsive Design",
+      "Tailwind CSS",
+      "AOS Animations",
+      "NPS Integration",
+      "Interactive Forms",
+      "Data Visualization"
+    ],
+    herramientas: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "Animate on Scroll (AOS)",
+      "Chart.js",
+      "Figma",
+      "Git & GitHub"
+    ]
+  },
   {
- 
-  name: "Mhum",
-  description: "E-commerce de lencería moderna. Desarrollo con filtros dinámicos, zoom de producto y diseño 100% responsivo.",
-  image: "/img/mhum.jpg",
-  link: "https://mhum.com",
-  tags: [
-    "E-commerce",
-    "Responsive Design",
-    "Product Filtering",
-    "Image Zoom",
-    "UX/UI"
-  ],
-  herramientas: [
-    "HTML5",
-    "CSS3 (Bootstrap 5)",
-    "JavaScript (ES6)",
-    "Git & GitHub",
-    "Visual Studio Code",
-    "Figma",
-    "Adobe Photoshop"
-  ]
-},
-  
-   {
-  name: "Atria-Estudio",
-  description: "Landing visual para estudio de arquitectura. Mockups realistas y enfoque premium.",
-  image: "/img/atriaestudio.jpg",
-  link: "https://sofiacrivisqui.github.io/atriaestudio/",
-  tags: ["Minimalismo", "Portafolio visual", "Diseño arquitectónico"], 
-  herramientas: ["React", "Tailwind CSS", "Figma", "Framer Motion", "GitHub", "Netlify"]
-}
-
+    name: "Palabra y Abismo",
+    description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
+    image: "/img/palabrayabismo.jpg",
+    link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
+    tags: [
+      "Psicoanálisis",
+      "Filosofía",
+      "UI personalizada",
+      "Diseño responsivo",
+      "Accesibilidad",
+      "Storytelling",
+      "Animaciones CSS"
+    ],
+    herramientas: [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "JavaScript (ES6)",
+      "Font Awesome",
+      "GitHub Pages",
+      "Figma",
+      "Adobe Photoshop"
+    ]
+  },
+  {
+    name: "Mhum",
+    description: "E-commerce de lencería moderna. Desarrollo con filtros dinámicos, zoom de producto y diseño 100% responsivo.",
+    image: "/img/mhum.jpg",
+    link: "https://mhum.com",
+    tags: [
+      "E-commerce",
+      "Responsive Design",
+      "Product Filtering",
+      "Image Zoom",
+      "UX/UI"
+    ],
+    herramientas: [
+      "HTML5",
+      "CSS3 (Bootstrap 5)",
+      "JavaScript (ES6)",
+      "Git & GitHub",
+      "Visual Studio Code",
+      "Figma",
+      "Adobe Photoshop"
+    ]
+  },
+  {
+    name: "Atria-Estudio",
+    description: "Landing visual para estudio de arquitectura. Mockups realistas y enfoque premium.",
+    image: "/img/atriaestudio.jpg",
+    link: "https://sofiacrivisqui.github.io/atriaestudio/",
+    tags: ["Minimalismo", "Portafolio visual", "Diseño arquitectónico"],
+    herramientas: ["React", "Tailwind CSS", "Figma", "Framer Motion", "GitHub", "Netlify"]
+  }
 ];
-// Proyectos diseño gráfico
+
+/* Proyectos diseño gráfico */
 const graphicProjects = [
-  
-    {
+  {
     name: "La Yerbita – Identidad Visual",
     description: "Desarrollo de branding, packaging y redes sociales para una yerba mate con tonada cordobesa.",
     image: "/img/yerbita-branding.jpg",
-     link: "docs/Manualdemarca-LaYerbita.pdf",
+    link: "/docs/Manualdemarca-LaYerbita.pdf", // <-- ruta al PDF en public/docs/
     tags: ["Branding", "Packaging", "Social Kit"],
-    herramientas: ["Adobe Illustrator", "Photoshop", "Figma"],
-  },
+    herramientas: ["Adobe Illustrator", "Photoshop", "Figma"]
+  }
 ];
 
 export default function Home() {
@@ -177,22 +172,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Botón flotante de WhatsApp */}
+      <WhatsAppButton
+        phone="5491123456789" // reemplazá por tu número en formato internacional sin +
+        message="Hola! Vi tu portfolio y quisiera más info sobre tus servicios."
+        variant="all"
+      />
 
       <Footer />
-      import WhatsAppButton from "./components/WhatsAppButton";
-
-function App() 
-  return (
-    <div>
-      {/* ...tu layout... */}
-      <WhatsAppButton
-        phone="5491123456789" // reemplazá por tu número (sin + ni espacios)
-        message="Hola! Vi tu portfolio y quiero consultarte sobre un proyecto."
-        variant="all" // "mobile" para aparecer sólo en móviles; "desktop" para solo escritorio
-      />
-    </div>
-  );
-
     </div>
   );
 }
