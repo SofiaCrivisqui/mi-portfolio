@@ -43,7 +43,7 @@ export default function WhatsAppButton({
 
       {/* Imagen fallback: si preferís usarla, pon el archivo en public/img/whatsapp.png */}
       <img
-        src="/img/whatsapp.png"
+        src="/img/whatsapp_3536445.png"
         alt="WhatsApp"
         className="w-8 h-8"
         style={{ display: useImgFallback ? "block" : "none" }}
