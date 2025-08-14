@@ -96,7 +96,7 @@ const graphicProjects = [
   {
     name: "La Yerbita – Identidad Visual",
     description: "Desarrollo de branding, packaging y redes sociales para una yerba mate con tonada cordobesa.",
-    image: "/img/yerbita-branding.jpg",
+    image: "/img/layerbita.png",
     link: "/docs/Manualdemarca-LaYerbita.pdf", // <-- ruta al PDF en public/docs/
     tags: ["Branding", "Packaging", "Social Kit"],
     herramientas: ["Adobe Illustrator", "Photoshop", "Figma"]
