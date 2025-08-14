@@ -179,6 +179,20 @@ export default function Home() {
 
 
       <Footer />
+      import WhatsAppButton from "./components/WhatsAppButton";
+
+function App() 
+  return (
+    <div>
+      {/* ...tu layout... */}
+      <WhatsAppButton
+        phone="5491123456789" // reemplazá por tu número (sin + ni espacios)
+        message="Hola! Vi tu portfolio y quiero consultarte sobre un proyecto."
+        variant="all" // "mobile" para aparecer sólo en móviles; "desktop" para solo escritorio
+      />
+    </div>
+  );
+
     </div>
   );
 }
