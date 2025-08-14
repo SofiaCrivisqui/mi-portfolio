@@ -174,8 +174,8 @@ export default function Home() {
 
       {/* Botón flotante de WhatsApp */}
       <WhatsAppButton
-        phone="5491123456789" // reemplazá por tu número en formato internacional sin +
-        message="Hola! Vi tu portfolio y quisiera más info sobre tus servicios."
+        phone="5493513726257" // reemplazá por tu número en formato internacional sin +
+        message="Hola! Vi tu portfolio"
         variant="all"
       />
 

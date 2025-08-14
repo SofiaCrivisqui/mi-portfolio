@@ -1,20 +1,13 @@
 import React from "react";
 
-/**
- * Props:
- * - phone: número en formato internacional sin + ni espacios. Ej: "5491123456789"
- * - message: texto inicial (opcional)
- * - variant: "all" | "mobile" | "desktop"  (opcional)
- */
 export default function WhatsAppButton({
-  phone = "5493513726257",
-  message = "Hola! Me contacto desde tu portfolio.",
-  variant = "all"
+  phone = "35493513726257",
+  message = "Hola! Vi tu portfolio",
+  variant = "all" // "mobile", "desktop" o "all"
 }) {
   const encoded = encodeURIComponent(message);
-  const href = `https://wa.me/${phone}?text=${encoded}`; // funciona bien en móvil y web
+  const href = `https://wa.me/${phone}?text=${encoded}`;
 
-  // clases según visibilidad
   const visibility =
     variant === "mobile" ? "md:hidden" : variant === "desktop" ? "hidden md:flex" : "flex";
 
@@ -24,17 +17,21 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Abrir chat de WhatsApp"
-      className={`${visibility} fixed right-4 bottom-[calc(env(safe-area-inset-bottom,16px)+1rem)] z-50 items-center justify-center w-14 h-14 rounded-full shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400`}
+      className={`${visibility} fixed right-4 bottom-[calc(env(safe-area-inset-bottom,16px)+1rem)] z-50 items-center justify-center w-16 h-16 rounded-full shadow-2xl transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 text-white`}
       style={{ background: "linear-gradient(135deg,#25D366,#128C7E)" }}
     >
-      {/* Icono WhatsApp (SVG ligero) */}
-      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-12.3 8.38 8.38 0 0 1 3.8.9" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M22 2l-5.2 5.2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M16.3 7.7c-.1.1-.8 1-.9 1.1s-.6.2-1 .1c-.5-.1-1.9-.9-3.6 1.1s-1.9 2.6-1.9 3.1c0 .5.1.9.5 1.2.4.3.8.8 1.6 1.5s1.7 1.2 2.3 1.4c.6.3 1 .3 1.4.2.4-.1 1.2-.5 2.2-1.4 1-.9 1.3-1.6 1.5-2 .2-.4.1-.8 0-1.1-.1-.3-.9-1.1-1.3-1.4z" strokeLinecap="round" strokeLinejoin="round"/>
+      {/* SVG con fill=currentColor para asegurar que tome text-white */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-8 h-8"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        {/* Versión rellena del logo WhatsApp — se verá bien sobre fondo verde */}
+        <path d="M16.01 3.02C9.3 3.02 3.98 8.34 3.98 15.05c0 2.66.86 5.12 2.34 7.15L3 29l6.03-3.13a11.99 11.99 0 0 0 6.98 2.11c6.71 0 12.03-5.32 12.03-12.03S22.72 3.02 16.01 3.02zm6.94 18.3c-.26.72-1.53 1.37-2.12 1.46-.56.08-1.23.11-2.06-.08-3.56-.83-5.86-3.55-6.79-4.77-.6-.82-.51-1.19-.11-1.67.37-.46.86-.6 1.29-.86.16-.09.33-.19.49-.28.16-.09.26-.14.38-.09.12.05.69.25 1.01.34.3.09.49.14.71.22.23.08.48.04.74-.02.26-.06 1.63-.75 1.89-.83.27-.09.47-.14.68.05.21.19.9.67 1.08.8.18.13.3.19.15.37-.15.18-.34.38-.49.52-.15.13-.31.28-.22.48.09.21.42.92.9 1.5.61.75 1.12 1.02 1.43 1.13.31.11.5.08.68-.05.18-.13.76-.48.92-.65.16-.17.35-.17.62-.12.26.05 1.72.79 2.02.94.3.15.5.22.57.34.07.12.07.71-.19 1.43z" />
       </svg>
 
-      {/* etiqueta accesible para lectores de pantalla */}
       <span className="sr-only">Abrir chat de WhatsApp</span>
     </a>
   );
